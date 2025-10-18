@@ -30,10 +30,7 @@ public class DogApiBreedFetcher implements BreedFetcher {
                 breed.toLowerCase(Locale.ROOT)
         );
 
-        Request request = new Request.Builder()
-                .url(url)
-                .get()
-                .build();
+        Request request = new Request.Builder().url(url).get().build();
 
         try (Response response = client.newCall(request).execute()) {
             if (!response.isSuccessful() || response.body() == null) {
