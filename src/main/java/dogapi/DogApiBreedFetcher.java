@@ -50,7 +50,7 @@ public class DogApiBreedFetcher implements BreedFetcher {
             List<String> subBreeds = new ArrayList<>(arr.length());
             for (int i = 0; i < arr.length(); i++) {
                 subBreeds.add(arr.getString(i));
-            }
+            } // to tests
             return subBreeds;
         } catch (IOException e) {
             throw new BreedFetcher.BreedNotFoundException("Error fetching sub-breeds for: " + breed);
